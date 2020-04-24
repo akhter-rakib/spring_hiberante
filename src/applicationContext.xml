@@ -8,6 +8,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+	<!-- load the external property file -->
+	<context:property-placeholder
+		location="classpath:cricket.properties" />
 	<bean id="happyFortune" class="com.rakib.HappyFortuneService">
 	</bean>
 	<bean id="luckyService" class="com.rakib.LuckyServiceImpl"></bean>
@@ -16,8 +19,8 @@
 	<bean id="cricketCoach" class="com.rakib.CricketCoach">
 		<constructor-arg ref="happyFortune" />
 		<property name="luckyService" ref="luckyService"></property>
-		<property name="emailAddress" value="rakibccj@gmail.com"></property>
-		<property name="team" value="BangladeshTeam"></property>
+		<property name="emailAddress" value="${coach.email}"></property>
+		<property name="team" value="${coach.team}"></property>
 	</bean>
 </beans>
 
