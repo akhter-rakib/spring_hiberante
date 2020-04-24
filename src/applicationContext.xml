@@ -10,10 +10,12 @@
 
 	<bean id="happyFortune" class="com.rakib.HappyFortuneService">
 	</bean>
+	<bean id="luckyService" class="com.rakib.LuckyServiceImpl"></bean>
 
 	<!-- Define your beans here with Dependency injection -->
 	<bean id="cricketCoach" class="com.rakib.CricketCoach">
 		<constructor-arg ref="happyFortune" />
+		<property name="luckyService" ref="luckyService"></property>
 	</bean>
 </beans>
 
