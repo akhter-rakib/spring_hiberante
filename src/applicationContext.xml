@@ -16,6 +16,8 @@
 	<bean id="cricketCoach" class="com.rakib.CricketCoach">
 		<constructor-arg ref="happyFortune" />
 		<property name="luckyService" ref="luckyService"></property>
+		<property name="emailAddress" value="rakibccj@gmail.com"></property>
+		<property name="team" value="BangladeshTeam"></property>
 	</bean>
 </beans>
 

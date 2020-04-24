@@ -14,6 +14,8 @@ public class MyApp {
 		System.out.println("IOC : " + cricket.getDaillyWork());
 		System.out.println("By Construc inject  : " + cricket.getFortune());
 		System.out.println("By setter inject :" + cricket.getLuckyService());
+		System.out.println("Inject literal value in SetMethod : " + cricket.getTeam());
+		System.out.println("Inject literal value in SetMethod : " + cricket.getEmailAddress());
 		// close the context
 		context.close();
 	}
