@@ -8,13 +8,13 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<!-- Define your beans here -->
-
-	<!-- define the dependency -->
-	<bean id="cricketCoach" class="com.rakib.CricketCoach">
-
+	<bean id="happyFortune" class="com.rakib.HappyFortuneService">
 	</bean>
 
+	<!-- Define your beans here with Dependency injection -->
+	<bean id="cricketCoach" class="com.rakib.CricketCoach">
+		<constructor-arg ref="happyFortune" />
+	</bean>
 </beans>
 
 
