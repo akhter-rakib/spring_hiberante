@@ -8,7 +8,7 @@ public class BeanScopeApp {
 		// load the spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beasnScopeapplicationContext.xml");
 		// retrieve bean from spring container
-		// by default bean scope is singleton
+		// everytime it will create new object because of scope is prototype
 		BeanScope scope = context.getBean("scope", BeanScope.class);
 		BeanScope scopes = context.getBean("scope", BeanScope.class);
 		boolean result = (scope == scopes);
