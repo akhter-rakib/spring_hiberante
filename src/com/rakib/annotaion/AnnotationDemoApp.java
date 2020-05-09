@@ -13,6 +13,7 @@ public class AnnotationDemoApp {
 		// call a method on the bean
 		System.out.println(cityzen.walkDaily());
 		System.out.println(cityzen.getPublicBussService());
+		System.out.println(cityzen.getPrivateCompanyService());
 		// close
 		context.close();
 	}

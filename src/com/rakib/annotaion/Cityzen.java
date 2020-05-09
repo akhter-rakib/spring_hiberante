@@ -7,6 +7,13 @@ import org.springframework.stereotype.Component;
 public class Cityzen implements CountryRule {
 
 	private BussService bussService;
+	
+	private PrivateCompanyService privateCompanyService;
+
+	@Autowired
+	public void setPrivateCompanyService(PrivateCompanyService privateCompanyService) {
+		this.privateCompanyService = privateCompanyService;
+	}
 
 	@Autowired
 	public Cityzen(BussService bussService) {
@@ -17,8 +24,11 @@ public class Cityzen implements CountryRule {
 	public String walkDaily() {
 		return "Will walk for 2 hour";
 	}
-	public String getPublicBussService() {
+	public String getPublicBussService() {  
 		return bussService.getBusService();
+	}
+	public double getPrivateCompanyService() {
+		return privateCompanyService.salary();
 	}
 
 }
