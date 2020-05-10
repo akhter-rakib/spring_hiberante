@@ -14,6 +14,11 @@ public class AnnotationDemoApp {
 		System.out.println(cityzen.walkDaily());
 		System.out.println(cityzen.getPublicBussService());
 		System.out.println(cityzen.getPrivateCompanyService());
+
+		// get Bean
+		MiddleClassCityZen middleClassCityZen = context.getBean("middleClassCityZen", MiddleClassCityZen.class);
+		System.out.println(middleClassCityZen.getBussService());
+		System.out.println(middleClassCityZen.getSalary());
 		// close
 		context.close();
 	}
