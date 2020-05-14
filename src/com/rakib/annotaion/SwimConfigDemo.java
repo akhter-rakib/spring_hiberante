@@ -8,9 +8,10 @@ public class SwimConfigDemo {
 		// load the config class
 		AnnotationConfigApplicationContext contex = new AnnotationConfigApplicationContext(SpringConfigFile.class);
 		// get bean
-		SwimCoach coach = contex.getBean("footBallCoach", SwimCoach.class);
+		SwimCoach coach = contex.getBean("swimCoach", SwimCoach.class);
 		// retrive method
 		System.out.println(coach.getAdvice());
+		System.out.println("Email Address : " + coach.getEmail());
 		// close
 		contex.close();
 	}
